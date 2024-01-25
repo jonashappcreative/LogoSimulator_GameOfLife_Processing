@@ -1,30 +1,30 @@
 //--------------------------------------------------------------------------------------------------------------
 PImage logo;
 
-int[][] grid;                    //2D Grid Array für den AKTUELLEN Zustand der Zellen
-int[][] next;                    //2D Grid Array für den NEUEN Zustand der Zellen
+int[][] grid;                    //2D Grid Array for the current condition of the cells
+int[][] next;                    //2D Grid Array for the new condition of the cells
 
 //Festlegen der Farben--------------------------//
 
-color alive = (#00ff00);         //Grün
-color dead = (0);                //Schwarz
+color alive = (#00ff00);         //green
+color dead = (0);                //black
 
-//color alive = (#ffffff);       //Grün
-//color dead = (#387f91);        //Sherpa
+//color alive = (#ffffff);       //green
+//color dead = (#387f91);        //Sherpa Logo Color
 
-//color alive = 0;               //Schwarz
-//color dead = 255;              //Weiß
+//color alive = 0;               //black
+//color dead = 255;              //white
 
-int gridSize = 30;               //Bei Shiffman: "resolution"
+int gridSize = 30;               //Daniel Shiffman: "resolution"
 int strokeW = 2;
 
 //Festlegen der Parameter--------------------------//
-int lineCount = 4;               //Anzahl der Linien der Schraffur nach innen hin bei cell = alive
-int schwellwertGrid = 50;        //Ab diesem Schwellwert wird ein Grid gezeichnet
+int lineCount = 4;               //Line Count inside an alive cell to fill = alive
+int schwellwertGrid = 50;        //Processing only draws a grid if grid size exceeds this value
 
 //Festlegen der Animation--------------------------//
 int framerate;
-int endFrame = 189;              //Legt den Frame fest, an dem der Loop beendet wird, damit der Frame Geplottet werden kann. Alternativ: SaveFrame Stoppen oder Exit
+int endFrame = 189;              //Sets the last frame to plot the image using a plotter. Alternative: SaveFrame stop or exit
 
 //--------------------------------------------------------------------------------------------------------------
 
